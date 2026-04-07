@@ -1,0 +1,621 @@
+/* ========================
+   1. NAVBAR & MENU
+   ======================== */
+.main-navbar {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    padding: 10px 0;
+    z-index: 10000;
+}
+
+.nav-logo {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
+}
+
+.nav-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin-left: 10px;
+    text-shadow: 2px 2px 4px black;
+}
+
+.nav-link {
+    color: white !important;
+    font-size: 1.1rem;
+    margin: 0 10px;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.9);
+}
+.nav-link:hover { color: #ffc107 !important; }
+
+/* --- VERSION PC (Largeur > 991px) --- */
+@media (min-width: 992px) {
+    .navbar-collapse {
+        display: flex !important;
+        background: transparent !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+    .navbar-toggler { display: none !important; } /* Cache le burger sur PC */
+}
+
+@media (max-width: 991px) {
+    .main-navbar {
+        background: black !important;
+        height: 70px; /* On fixe la hauteur pour éviter les sauts */
+    }
+
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    }
+
+    /* On gère l'affichage  */
+    .navbar-collapse {
+        position: absolute;
+        top: 70px; 
+        left: 0;
+        width: 100%;
+        background-color: black !important;
+        z-index: 99999;
+        border-top: 1px solid #222;
+    }
+
+    /* On force l'état ouvert proprement */
+    .navbar-collapse.show {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    .nav-item {
+        padding: 15px;
+        border-bottom: 1px solid #111;
+        text-align: center;
+    }
+}
+
+/* ========================
+   2. RESTE DU SITE
+   ======================== */
+.hero-background {
+    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+    z-index: -1; background-size: cover; background-position: center;
+}
+.hero-overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+.hero-content {
+    position: relative; z-index: 1; height: 100vh;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center; padding-top: 80px;
+}
+.hero-title {
+    font-size: 3.5rem; font-weight: 800; color: white;
+    text-shadow: 0 5px 15px black; margin-bottom: 40px; text-align: center;
+}
+.cards-wrapper { display: flex; align-items: flex-end; gap: 15px; height: 350px; }
+.card-slide {
+    width: 70px; height: 150px; border-radius: 15px; overflow: hidden;
+    cursor: pointer; opacity: 0.8; border: 2px solid white; transition: all 0.4s ease;
+}
+.card-slide img { width: 100%; height: 100%; object-fit: cover; }
+.card-slide.active {
+    width: 240px; height: 360px; opacity: 1; border: 4px solid #fff;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+}
+@media (max-width: 768px) {
+    .card-slide { width: 45px; height: 100px; }
+    .card-slide.active { width: 150px; height: 250px; }
+    .hero-title { font-size: 2.5rem; }
+}
+
+
+
+
+
+
+
+
+/* ============================================================
+   DESIGN PREMIUM - PAGE LOGIN
+   ============================================================ */
+
+/* Conteneur principal - Fond sombre profond */
+.login-page {
+    min-height: 100vh;
+    background: radial-gradient(circle at center, #1a1c23 0%, #050505 100%);
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+}
+
+/* Barre de navigation du haut */
+.login-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 50px;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo {
+    height: 45px;
+    width: auto;
+}
+
+.nav-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin-left: 12px;
+}
+
+.btn-retour {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 10px 25px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.btn-retour:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    border-color: white;
+}
+
+/* Centrage du formulaire */
+.login-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Carte de connexion (Effet verre fumé) */
+.login-glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 50px 45px;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.login-header h2 {
+    color: white;
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin: 0 0 10px 0;
+}
+
+.login-header p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* Groupes d'entrée (Email & Password) */
+.input-box {
+    margin-bottom: 25px;
+}
+
+.input-box label {
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+.input-box input {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 16px 20px;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.input-box input:focus {
+    border-color: #ffc107; /* Or SicilyLines */
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 15px rgba(255, 193, 7, 0.15);
+}
+
+/* Bouton Se Connecter (Or SicilyLines) */
+.btn-login-gold {
+    width: 100%;
+    background: #ffc107;
+    color: #000;
+    border: none;
+    padding: 18px;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-login-gold:hover {
+    background: #ffca2c;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(255, 193, 7, 0.3);
+}
+
+/* Footer de la carte */
+.login-footer {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.login-footer a {
+    color: rgba(255, 255, 255, 0.4);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: 0.3s;
+}
+
+.login-footer a:hover {
+    color: #ffc107;
+}
+
+/* Media Query Mobile */
+@media (max-width: 576px) {
+    .login-nav { padding: 20px; }
+    .login-glass-card { padding: 40px 25px; }
+    .nav-text { display: none; } /* On cache le texte SicilyLines sur très petit écran */
+}
+
+
+
+
+/* ============================================================
+   DESIGN DASHBOARD - LISTE DES FERRIES
+   ============================================================ */
+
+:root {
+    --db-turquoise: #4fd1c5;
+    --db-gold: #ffc107;
+    --db-danger: #ff0000;
+    --db-glass: rgba(255, 255, 255, 0.03);
+}
+
+/* Fond identique au Login pour la cohérence */
+.db-page-wrapper {
+    min-height: 100vh;
+    background: radial-gradient(circle at center, #1a1c23 0%, #050505 100%);
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Navbar spécifique au Dashboard */
+.db-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.db-user-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.db-user-avatar {
+    width: 45px;
+    height: 45px;
+    background: white;
+    border-radius: 50%;
+}
+
+.db-user-info { text-align: right; }
+.db-user-name { display: block; font-size: 0.9rem; font-weight: 600; color: white; margin-bottom: 4px; }
+
+.db-btn-logout {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+
+/* Contenu */
+.db-container { padding: 30px 50px; }
+
+.db-action-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 25px;
+}
+
+.db-btn-pdf {
+    background: #7a87e5;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.db-btn-add {
+    background: #1a1a4d;
+    color: white;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* Table Glassmorphism */
+.db-glass-card {
+    background: var(--db-glass);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    padding: 40px;
+}
+
+.db-table { width: 100%; border-collapse: collapse; }
+.db-table th {
+    color: var(--db-turquoise);
+    text-align: left;
+    padding-bottom: 20px;
+    font-weight: 500;
+    text-transform: lowercase;
+}
+.db-table td { padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+
+/* Boutons Actions avec  codes couleurs corespondante  */
+.db-btn-action {
+    border: none;
+    padding: 8px 20px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.db-btn-detail { background: #3b82f6; box-shadow: 0 0 10px rgba(59, 130, 246, 0.4); }
+.db-btn-modify { background: #1e1bff; margin-left: 8px; }
+.db-btn-delete { 
+    background: var(--db-danger); 
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+    margin-left: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================================
+   1. VARIABLES & BASES
+   ============================================================ */
+:root {
+    --db-turquoise: #4fd1c5;
+    --db-gold: #ffc107;
+    --db-gold-muted: rgba(255, 215, 0, 0.3);
+    --db-danger: #ff4444;
+    --db-info: #3b82f6;
+    --db-glass: rgba(255, 255, 255, 0.03);
+    --db-border: rgba(255, 255, 255, 0.1);
+    --db-input-bg: rgba(0, 0, 0, 0.4);
+}
+
+.db-page-wrapper {
+    min-height: 100vh;
+    background: radial-gradient(circle at center, #1a1c23 0%, #050505 100%);
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ============================================================
+   2. NAVIGATION COMMUNE (Dashboard, Create, Show)
+   ============================================================ */
+.db-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.db-user-section { display: flex; align-items: center; gap: 15px; }
+.db-user-avatar { width: 45px; height: 45px; background: white; border-radius: 50%; }
+.db-user-info { text-align: right; }
+.db-user-name { display: block; font-size: 0.9rem; font-weight: 600; color: white; margin-bottom: 4px; }
+
+.db-btn-logout {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.db-btn-logout:hover { background: white; color: black; }
+
+/* ============================================================
+   3. DASHBOARD - LISTE (dashboard.blade.php)
+   ============================================================ */
+.db-container { padding: 30px 50px; }
+
+.db-action-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 25px;
+}
+
+.db-btn-pdf {
+    background: #7a87e5;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.db-btn-add {
+    background: #1a1a4d;
+    color: white;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.db-glass-card {
+    background: var(--db-glass);
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--db-border);
+    border-radius: 25px;
+    padding: 40px;
+}
+
+.db-table { width: 100%; border-collapse: collapse; }
+.db-table th { color: var(--db-turquoise); text-align: left; padding-bottom: 20px; text-transform: lowercase; }
+.db-table td { padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+
+.db-btn-action { border: none; padding: 8px 20px; border-radius: 8px; color: white; font-weight: 600; cursor: pointer; text-decoration: none; display: inline-block; }
+.db-btn-detail { background: var(--db-info); box-shadow: 0 0 10px rgba(59, 130, 246, 0.4); }
+.db-btn-modify { background: #1e1bff; margin-left: 8px; }
+.db-btn-delete { background: var(--db-danger); box-shadow: 0 0 15px rgba(255, 0, 0, 0.5); margin-left: 8px; }
+
+/* ============================================================
+   4. FORMULAIRE - AJOUT (create.blade.php)
+   ============================================================ */
+.form-wrapper { padding: 40px; max-width: 900px; margin: 0 auto; }
+
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--db-gold-muted);
+    padding-bottom: 15px;
+}
+
+.form-container {
+    background: var(--db-glass);
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid var(--db-border);
+}
+
+.form-input-box { margin-bottom: 20px; }
+.form-input-box label { color: var(--db-gold); display: block; margin-bottom: 8px; font-weight: 600; }
+.form-input-box input[type="text"], 
+.form-input-box input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    background: var(--db-input-bg);
+    border: 1px solid var(--db-border);
+    color: white;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-input-grid { display: flex; gap: 20px; margin-bottom: 20px; }
+.form-input-grid .form-input-box { flex: 1; }
+
+.form-checkbox-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    background: rgba(0,0,0,0.3);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.form-checkbox-item { color: white; cursor: pointer; display: flex; align-items: center; gap: 8px; }
+
+.btn-back-gold {
+    text-decoration: none;
+    background: #444;
+    color: var(--db-gold);
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: 1px solid var(--db-gold);
+    font-size: 0.9em;
+}
+
+/* ============================================================
+   5. FICHES DÉTAILS (show.blade.php)
+   ============================================================ */
+.detail-container { padding: 20px; }
+
+.detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.detail-left { display: flex; flex-direction: column; gap: 20px; }
+
+.detail-card {
+    background: var(--db-glass);
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid var(--db-border);
+}
+
+.detail-title { color: var(--db-gold); margin-top: 0; }
+
+.detail-list { list-style: none; padding: 0; color: white; font-size: 1.1em; line-height: 2.2; }
+.detail-list strong { color: var(--db-turquoise); }
+
+.detail-photo { max-width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--db-border); margin-top: 10px; }
+.detail-no-photo { height: 200px; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.2); border-radius: 8px; color: #666; }
+
+.detail-badge {
+    background: rgba(0,0,0,0.4);
+    border: 1px solid var(--db-gold);
+    color: var(--db-gold);
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 0.9em;
+}
