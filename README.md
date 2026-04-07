@@ -1,59 +1,34 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <img src="https://via.placeholder.com/400x150?text=SicilyLines+Logo" width="400" alt="SicilyLines Logo">
 </p>
 
-## About Laravel
+<p align="center">
+<a href="#"><img src="https://img.shields.io/badge/Version-1.0.0-gold" alt="Version"></a>
+<a href="#"><img src="https://img.shields.io/badge/Style-Sicily%20Style-black" alt="Style"></a>
+<a href="#"><img src="https://img.shields.io/badge/License-MIT-brightgreen" alt="License"></a>
+</p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## À propos de SicilyLines
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+**SicilyLines** est une application web premium dédiée à la gestion de flotte de ferries. Elle permet une administration complète des navires, de leurs caractéristiques techniques et de leurs équipements embarqués, le tout enveloppé dans une interface luxueuse.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+L'objectif est de transformer la gestion logistique en une expérience créative et intuitive, en facilitant les tâches complexes liées à l'administration maritime :
 
-## Learning Laravel
+- **Dashboard Administrateur** : Une vue d'ensemble élégante de tous les navires.
+- **Gestion CRUD Avancée** : Administration complète des ferries avec gestion fluide des images.
+- **Relations Dynamiques** : Association Many-to-Many pour lier équipements et navires.
+- **Exportation Professionnelle** : Génération de fiches techniques via DomPDF.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## Le "Sicily Style"
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+L'application arbore une interface **Premium au design sombre et doré**. L'expérience utilisateur est sublimée par un carrousel immersif en **React** et une mise en évidence intuitive des actions de gestion, créant une identité visuelle forte et luxueuse pour la marque.
 
-## Laravel Sponsors
+## Stack Technique
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+SicilyLines repose sur des technologies modernes pour garantir performance et robustesse :
 
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- **Frontend** : [React.js](https://reactjs.org/) (Carrousel et composants immersifs).
+- **Backend** : [Laravel](https://laravel.com) (Framework PHP robuste).
+- **Base de données** : [MySQL](https://www.mysql.com/) (Gestion relationnelle des données).
+- **Génération PDF** : [DomPDF](https://github.com/dompdf/dompdf).
+- **Design** : Custom CSS "Sicily Style" (Dark & Gold).
